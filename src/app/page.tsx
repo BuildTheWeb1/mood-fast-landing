@@ -1,45 +1,15 @@
 import Image from "next/image";
+import { Footer } from "@/components/Footer";
+import { Header } from "@/components/Header";
 
 export default function Home() {
 	return (
-		<div className="min-h-screen bg-[#F5F5F5] font-sans">
-			{/* Navigation */}
-			<nav className="flex items-center justify-between px-6 py-4 md:px-12 lg:px-20">
-				<div className="flex items-center gap-2">
-					<Image
-						src="/images/mood-fast_logo.png"
-						alt="Mood Fast logo"
-						width={40}
-						height={40}
-						priority
-					/>
-					<span className="text-xl font-bold text-[#1A1A1A]">Mood Fast</span>
-				</div>
-				<div className="hidden items-center gap-8 md:flex">
-					<a
-						href="#features"
-						className="text-[#6B7280] transition-colors hover:text-[#1A1A1A]"
-					>
-						Features
-					</a>
-					<a
-						href="#how-it-works"
-						className="text-[#6B7280] transition-colors hover:text-[#1A1A1A]"
-					>
-						How it works
-					</a>
-				</div>
-				<a
-					href="#download"
-					className="rounded-full bg-[#1A1A1A] px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-[#333]"
-				>
-					Download
-				</a>
-			</nav>
+		<div className="flex h-screen flex-col bg-[#F5F5F5] font-sans">
+			<Header />
 
 			{/* Hero Section */}
-			<section className="relative overflow-hidden px-6 pb-20 pt-12 md:px-12 md:pt-20 lg:px-20">
-				<div className="relative mx-auto flex min-h-[70vh] max-w-7xl flex-col items-center justify-center">
+			<section className="relative flex-1 overflow-hidden px-6 lg:px-20">
+				<div className="relative mx-auto flex h-full max-w-7xl flex-col items-center justify-center">
 					{/* Left floating image - skewed */}
 					<div className="absolute left-0 top-1/4 hidden -translate-x-1/4 lg:block">
 						<div className="relative h-[400px] w-[200px] -rotate-12 transform overflow-hidden rounded-3xl shadow-2xl transition-transform duration-500 hover:-rotate-6">
@@ -102,36 +72,10 @@ export default function Home() {
 							</p>
 						</div>
 					</div>
-
-					{/* Mobile app screenshots - visible on smaller screens */}
-					<div className="mt-16 flex items-center justify-center gap-4 lg:hidden">
-						<div className="relative h-[280px] w-[140px] -rotate-6 transform overflow-hidden rounded-2xl shadow-xl">
-							<Image
-								src="/images/mood-fast_home.png"
-								alt="Mood Fast home screen"
-								fill
-								className="object-cover object-top"
-							/>
-						</div>
-						<div className="relative h-[300px] w-[150px] overflow-hidden rounded-2xl shadow-xl">
-							<Image
-								src="/images/mood-fast_mood.png"
-								alt="Mood Fast mood screen"
-								fill
-								className="object-cover object-top"
-							/>
-						</div>
-						<div className="relative h-[280px] w-[140px] rotate-6 transform overflow-hidden rounded-2xl shadow-xl">
-							<Image
-								src="/images/mood-fast_progress.png"
-								alt="Mood Fast progress screen"
-								fill
-								className="object-cover object-top"
-							/>
-						</div>
-					</div>
 				</div>
 			</section>
+
+			<Footer />
 		</div>
 	);
 }
