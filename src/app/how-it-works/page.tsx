@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
+import { ScrollReveal } from "@/components/ScrollReveal";
 
 export const metadata: Metadata = {
   title: "How It Works",
@@ -11,6 +12,14 @@ export const metadata: Metadata = {
     canonical: "/how-it-works",
   },
 };
+
+const featureImages = [
+  "mood-fast_mood.png",
+  "mood-fast_activities.png",
+  "mood-fast_progress.png",
+  "mood-fast_gratitude.png",
+  "mood-fast_activity.png",
+];
 
 const features = [
   {
@@ -189,7 +198,11 @@ export default function HowItWorksPage() {
                     index % 2 === 1 ? "md:flex-row-reverse" : ""
                   }`}
                 >
-                  <div className="flex-1">
+                  <ScrollReveal
+                    variant={index % 2 === 0 ? "fade-right" : "fade-left"}
+                    delay={100}
+                    className="flex-1"
+                  >
                     <div className="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-[#60B5FF]/10 text-[#60B5FF]">
                       {feature.icon}
                     </div>
@@ -221,17 +234,21 @@ export default function HowItWorksPage() {
                         </li>
                       ))}
                     </ul>
-                  </div>
-                  <div className="flex-1">
+                  </ScrollReveal>
+                  <ScrollReveal
+                    variant={index % 2 === 0 ? "fade-left" : "fade-right"}
+                    delay={200}
+                    className="flex-1"
+                  >
                     <div className="relative mx-auto h-[400px] w-[200px] overflow-hidden rounded-3xl bg-white shadow-xl">
                       <Image
-                        src={`/images/mood-fast_${index === 0 ? "home" : index === 1 ? "mood" : "progress"}.png`}
+                        src={`/images/${featureImages[index]}`}
                         alt={`${feature.title} screenshot`}
                         fill
                         className="object-cover object-top"
                       />
                     </div>
-                  </div>
+                  </ScrollReveal>
                 </div>
               ))}
             </div>
