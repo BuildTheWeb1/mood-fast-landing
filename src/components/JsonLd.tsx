@@ -31,8 +31,8 @@ export function JsonLd() {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "Mood Fast",
-    url: "https://mood-fast-landing.vercel.app/",
-    logo: "https://mood-fast-landing.vercel.app/images/mood-fast_logo.png",
+    url: "https://moodfast.pro",
+    logo: "https://moodfast.proimages/mood-fast_logo.png",
     sameAs: ["https://x.com/buildtheweb1"],
   };
 
@@ -40,7 +40,7 @@ export function JsonLd() {
     "@context": "https://schema.org",
     "@type": "WebSite",
     name: "Mood Fast",
-    url: "https://mood-fast-landing.vercel.app/",
+    url: "https://moodfast.pro",
   };
 
   return (

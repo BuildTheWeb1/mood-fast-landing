@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const siteUrl = "https://mood-fast-landing.vercel.app/";
+const siteUrl = "https://moodfast.pro";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

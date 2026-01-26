@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://mood-fast-landing.vercel.app/sitemap.xml
+Sitemap: https://moodfast.prositemap.xml
