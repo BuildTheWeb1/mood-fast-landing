@@ -35,7 +35,7 @@ export function Header() {
         </Link>
       </nav>
       <a
-        href="https://apps.apple.com/ro/app/mood-fast/id6755293215"
+        href="https://apps.apple.com/app/mood-fast/id6755293215"
         target="_blank"
         rel="noopener noreferrer"
         className="rounded-full bg-[#1A1A1A] px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-[#333]"

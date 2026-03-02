@@ -54,7 +54,7 @@ export default function Home() {
             {/* App Store Button */}
             <div className="mt-10 flex flex-col items-center gap-4">
               <a
-                href="https://apps.apple.com/ro/app/mood-fast/id6755293215"
+                href="https://apps.apple.com/app/mood-fast/id6755293215"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 rounded-xl bg-[#1A1A1A] px-6 py-3.5 text-white transition-transform hover:scale-105"
