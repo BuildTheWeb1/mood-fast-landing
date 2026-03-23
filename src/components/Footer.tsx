@@ -1,9 +1,16 @@
+import Image from "next/image";
+
 export function Footer() {
   return (
     <footer className="bg-[#111] py-6">
       <div className="mx-auto flex max-w-7xl flex-col items-center gap-3 px-6 md:flex-row md:justify-between md:px-12">
         <div className="flex items-center gap-2">
-          <div className="h-[22px] w-[22px] rounded-[6px] bg-gradient-to-br from-[#8B6FE8] to-[#83F6CC]" />
+          <Image
+            src="/images/mood-fast_logo.png"
+            alt="Mood Fast logo"
+            width={28}
+            height={28}
+          />
           <span className="text-sm font-semibold text-white">Mood Fast</span>
         </div>
         <p className="text-sm text-white/35">

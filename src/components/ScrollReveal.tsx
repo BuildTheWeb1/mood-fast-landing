@@ -93,7 +93,7 @@ export function ScrollReveal({
   return (
     <div
       ref={ref}
-      className={`transition-all ease-out ${isVisible ? styles.animate : styles.initial} ${className}`}
+      className={`transition-[opacity,transform] ease-out motion-reduce:transition-none ${isVisible ? styles.animate : styles.initial} ${className}`}
       style={{
         transitionDuration: `${duration}ms`,
         transitionDelay: `${delay}ms`,

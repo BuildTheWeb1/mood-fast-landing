@@ -105,7 +105,7 @@ export function FeatureTabs() {
       {/* Feature panel */}
       <div className="flex flex-col items-center gap-10 rounded-3xl bg-white p-8 shadow-[0_2px_20px_rgba(139,111,232,0.08)] md:flex-row md:gap-12 md:p-10">
         {/* Phone mockup */}
-        <div className="relative h-[306px] w-[170px] flex-shrink-0 overflow-hidden rounded-[26px] bg-[#1A1A1A] shadow-[0_20px_50px_rgba(0,0,0,0.2)]">
+        <div className="relative h-[440px] w-[244px] flex-shrink-0 overflow-hidden rounded-[34px] bg-[#1A1A1A] shadow-[0_20px_50px_rgba(0,0,0,0.2)]">
           <Image
             src={active.screenshot}
             alt={active.screenshotAlt}

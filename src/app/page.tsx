@@ -69,7 +69,7 @@ export default function Home() {
 
       <main className="flex-1">
         {/* ── HERO ── */}
-        <section className="relative overflow-hidden bg-gradient-to-br from-[#1A1A1A] via-[#2d1f4e] to-[#1a3028] px-6 pb-0 pt-16 text-center lg:px-20">
+        <section className="relative overflow-hidden bg-gradient-to-br from-[#1A1A1A] via-[#2d1f4e] to-[#1a3028] px-6 pb-24 pt-28 text-center lg:px-20">
           {/* Radial glows */}
           <div
             className="pointer-events-none absolute -left-24 -top-24 h-[400px] w-[400px] rounded-full"
@@ -134,7 +134,7 @@ export default function Home() {
                 <p className="text-sm font-bold text-[#83F6CC]">😊 Great</p>
               </div>
               <div
-                className="absolute bottom-12 left-[12%] hidden rounded-2xl bg-[#83F6CC] px-3 py-2 lg:block"
+                className="absolute bottom-20 left-[12%] z-10 hidden rounded-2xl bg-[#83F6CC] px-3 py-2 lg:block"
                 aria-hidden="true"
               >
                 <p className="text-[9px] text-[#0a6648]">Level</p>
@@ -142,8 +142,8 @@ export default function Home() {
               </div>
 
               {/* Left phone — desktop only */}
-              <div className="hidden rotate-[-8deg] translate-y-3 overflow-hidden rounded-[22px] bg-[#0d0d0d] shadow-[0_28px_70px_rgba(0,0,0,0.5)] lg:block">
-                <div className="relative h-[216px] w-[120px]">
+              <div className="hidden rotate-[-8deg] translate-y-4 overflow-hidden rounded-[28px] bg-[#0d0d0d] shadow-[0_28px_70px_rgba(0,0,0,0.5)] lg:block">
+                <div className="relative h-[320px] w-[178px]">
                   <Image
                     src="/images/mood-fast_mood.png"
                     alt="Mood Fast mood tracking screen"
@@ -155,8 +155,8 @@ export default function Home() {
               </div>
 
               {/* Center phone — always visible */}
-              <div className="overflow-hidden rounded-[22px] bg-[#0d0d0d] shadow-[0_28px_70px_rgba(0,0,0,0.5)]">
-                <div className="relative h-[252px] w-[140px]">
+              <div className="overflow-hidden rounded-[28px] bg-[#0d0d0d] shadow-[0_28px_70px_rgba(0,0,0,0.5)]">
+                <div className="relative h-[380px] w-[210px]">
                   <Image
                     src="/images/mood-fast_home.png"
                     alt="Mood Fast home screen"
@@ -168,8 +168,8 @@ export default function Home() {
               </div>
 
               {/* Right phone — desktop only */}
-              <div className="hidden rotate-[8deg] translate-y-3 overflow-hidden rounded-[22px] bg-[#0d0d0d] shadow-[0_28px_70px_rgba(0,0,0,0.5)] lg:block">
-                <div className="relative h-[216px] w-[120px]">
+              <div className="hidden rotate-[8deg] translate-y-4 overflow-hidden rounded-[28px] bg-[#0d0d0d] shadow-[0_28px_70px_rgba(0,0,0,0.5)] lg:block">
+                <div className="relative h-[320px] w-[178px]">
                   <Image
                     src="/images/mood-fast_progress.png"
                     alt="Mood Fast progress screen"
@@ -181,29 +181,6 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </section>
-
-        {/* ── TRUST STRIP ── */}
-        <section className="border-t border-[rgba(139,111,232,0.2)] bg-[#111] px-6 py-5">
-          <ul className="mx-auto flex max-w-3xl flex-wrap justify-center gap-x-8 gap-y-3">
-            {[
-              "🔒 Encrypted storage",
-              "🍎 Sign in with Apple",
-              "🚫 Never sold or shared",
-              "🔐 Firebase-authenticated",
-            ].map((item) => (
-              <li
-                key={item}
-                className="flex items-center gap-2 text-sm text-white/55"
-              >
-                <span
-                  className="h-1.5 w-1.5 rounded-full bg-[#83F6CC]"
-                  aria-hidden="true"
-                />
-                {item}
-              </li>
-            ))}
-          </ul>
         </section>
 
         {/* ── FEATURE SHOWCASE ── */}

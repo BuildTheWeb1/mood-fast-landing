@@ -7,7 +7,7 @@ import { ScrollReveal } from "@/components/ScrollReveal";
 export const metadata: Metadata = {
   title: "How It Works",
   description:
-    "Learn how Mood Fast helps you track your mood in 2 seconds, get personalized wellness activities, and discover emotional patterns with AI-powered insights.",
+    "Learn how Mood Fast helps you track your mood in 2 seconds, get personalized wellness activities, and discover emotional patterns through your mood calendar and visual analytics.",
   alternates: {
     canonical: "/how-it-works",
   },
@@ -77,11 +77,11 @@ const features = [
   {
     title: "Discover Your Patterns",
     description:
-      "Visualize your emotional journey with beautiful charts and AI-powered insights. Understand what affects your mood and make informed decisions.",
+      "Visualize your emotional journey with weekly and monthly charts. Your mood calendar reveals what's really affecting your wellbeing — so you can make informed decisions.",
     points: [
       "Weekly and monthly mood graphs",
-      "AI-generated insights",
-      "Pattern recognition",
+      "Mood calendar with color-coded history",
+      "Spot emotional trends over time",
     ],
     icon: (
       <svg
@@ -103,7 +103,7 @@ const features = [
   {
     title: "Practice Daily Gratitude",
     description:
-      "Start each day with intention. Our guided gratitude prompts help you focus on the positive and build a more optimistic mindset.",
+      "Record what you're grateful for in seconds. Guided prompts make it easy, and a running streak keeps you consistent.",
     points: [
       "Daily gratitude prompts",
       "Journal your thoughts",
@@ -161,8 +161,8 @@ export default function HowItWorksPage() {
               How It Works
             </h1>
             <p className="mx-auto mt-4 max-w-2xl text-lg text-[#6B7280]">
-              Mood Fast makes emotional wellness simple. Here&apos;s how you can
-              transform your life in just a few steps.
+              Mood Fast makes emotional wellness simple. Here&apos;s how it
+              works — and why it actually sticks.
             </p>
           </div>
 
@@ -176,12 +176,12 @@ export default function HowItWorksPage() {
             <StepCard
               number="2"
               title="Get recommendations"
-              description="Receive personalized activities based on your current mood."
+              description="Get a personalized activity matched to how you're feeling — right now."
             />
             <StepCard
               number="3"
               title="Track progress"
-              description="Watch your patterns emerge and celebrate your wellness journey."
+              description="See your emotional patterns build week by week. Your progress is always visible."
             />
           </div>
 
