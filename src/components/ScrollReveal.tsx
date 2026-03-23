@@ -61,7 +61,7 @@ export function ScrollReveal({
       className={className}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, margin: "0px 0px -60px 0px" }}
+      viewport={{ once: false, margin: "0px 0px -60px 0px" }}
       variants={variants[variant]}
       transition={{
         type: "spring",
