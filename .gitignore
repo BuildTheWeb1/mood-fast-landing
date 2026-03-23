@@ -54,4 +54,5 @@ Thumbs.db
 
 # claude
 /.claude
+/.superpowers
 /docs
