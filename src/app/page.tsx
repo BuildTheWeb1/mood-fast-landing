@@ -1,9 +1,31 @@
+"use client";
+
 import Image from "next/image";
 import { Footer } from "@/components/Footer";
 import { FaqAccordion } from "@/components/FaqAccordion";
 import { Header } from "@/components/Header";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { FeatureTabs } from "@/components/FeatureTabs";
+import { motion } from "framer-motion";
+
+const heroContainer = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.12,
+      delayChildren: 0.1,
+    },
+  },
+};
+
+const heroItem = {
+  hidden: { opacity: 0, y: 28 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { type: "spring" as const, stiffness: 80, damping: 18 },
+  },
+};
 
 const APP_STORE_URL = "https://apps.apple.com/app/mood-fast/id6755293215";
 
@@ -88,9 +110,17 @@ export default function Home() {
             aria-hidden="true"
           />
 
-          <div className="relative z-10 mx-auto max-w-4xl">
+          <motion.div
+            className="relative z-10 mx-auto max-w-4xl"
+            variants={heroContainer}
+            initial="hidden"
+            animate="show"
+          >
             {/* Social proof badge */}
-            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-2 backdrop-blur-sm">
+            <motion.div
+              variants={heroItem}
+              className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-2 backdrop-blur-sm"
+            >
               <span className="text-[#FFD93D]" aria-hidden="true">
                 ★★★★★
               </span>
@@ -98,23 +128,23 @@ export default function Home() {
                 <span className="sr-only">Rated 4.8 out of 5.</span>
                 <span aria-hidden="true">4.8 · 100+ App Store reviews</span>
               </span>
-            </div>
+            </motion.div>
 
-            <h1 className="text-balance text-[clamp(36px,6vw,52px)] font-extrabold leading-tight tracking-tight text-white">
+            <motion.h1 variants={heroItem} className="text-balance text-[clamp(36px,6vw,52px)] font-extrabold leading-tight tracking-tight text-white">
               Your{" "}
               <span className="text-[#83F6CC]">emotional wellness</span>{" "}
               companion.
-            </h1>
+            </motion.h1>
 
-            <p className="mx-auto mt-5 max-w-[420px] text-lg leading-relaxed text-white/65">
+            <motion.p variants={heroItem} className="mx-auto mt-5 max-w-[420px] text-lg leading-relaxed text-white/65">
               Log how you&apos;re feeling in 2 seconds. See patterns. Get
               personalized activities to feel better right now.
-            </p>
+            </motion.p>
 
-            <div className="mt-8 flex flex-col items-center gap-3">
+            <motion.div variants={heroItem} className="mt-8 flex flex-col items-center gap-3">
               <AppStoreButton />
               <p className="text-sm text-white/40">Free to start · iOS only</p>
-            </div>
+            </motion.div>
 
             {/* Phone mockups row */}
             <div className="relative mt-12 flex items-end justify-center gap-4">
@@ -180,7 +210,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
         </section>
 
         {/* ── FEATURE SHOWCASE ── */}
