@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, type Variants } from "framer-motion";
-import { type ReactNode } from "react";
+import type { ReactNode } from "react";
 
 type AnimationVariant =
   | "fade-up"
@@ -55,7 +55,6 @@ export function ScrollReveal({
   children,
   variant = "fade-up",
   delay = 0,
-  duration = 0.6,
   className = "",
 }: ScrollRevealProps) {
   return (

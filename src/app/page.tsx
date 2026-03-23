@@ -1,12 +1,12 @@
 "use client";
 
+import { motion } from "framer-motion";
 import Image from "next/image";
-import { Footer } from "@/components/Footer";
 import { FaqAccordion } from "@/components/FaqAccordion";
+import { FeatureTabs } from "@/components/FeatureTabs";
+import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { ScrollReveal } from "@/components/ScrollReveal";
-import { FeatureTabs } from "@/components/FeatureTabs";
-import { motion } from "framer-motion";
 
 const heroContainer = {
   hidden: {},
@@ -32,7 +32,12 @@ const centerPhoneVariants = {
   show: {
     opacity: 1,
     y: 0,
-    transition: { type: "spring" as const, stiffness: 60, damping: 20, delay: 0.5 },
+    transition: {
+      type: "spring" as const,
+      stiffness: 60,
+      damping: 20,
+      delay: 0.5,
+    },
   },
 };
 
@@ -42,7 +47,12 @@ const leftPhoneVariants = {
     opacity: 1,
     y: 16,
     rotate: -8,
-    transition: { type: "spring" as const, stiffness: 55, damping: 18, delay: 0.65 },
+    transition: {
+      type: "spring" as const,
+      stiffness: 55,
+      damping: 18,
+      delay: 0.65,
+    },
   },
 };
 
@@ -52,7 +62,12 @@ const rightPhoneVariants = {
     opacity: 1,
     y: 16,
     rotate: 8,
-    transition: { type: "spring" as const, stiffness: 55, damping: 18, delay: 0.72 },
+    transition: {
+      type: "spring" as const,
+      stiffness: 55,
+      damping: 18,
+      delay: 0.72,
+    },
   },
 };
 
@@ -101,7 +116,12 @@ const AppStoreButton = () => (
     whileTap={{ scale: 0.97 }}
     transition={{ type: "spring", stiffness: 300, damping: 18 }}
   >
-    <svg className="h-8 w-8" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+    <svg
+      className="h-8 w-8"
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      aria-hidden="true"
+    >
       <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
     </svg>
     <div className="flex flex-col items-start">
@@ -157,18 +177,26 @@ export default function Home() {
               </span>
             </motion.div>
 
-            <motion.h1 variants={heroItem} className="text-balance text-[clamp(36px,6vw,52px)] font-extrabold leading-tight tracking-tight text-white">
-              Your{" "}
-              <span className="text-[#83F6CC]">emotional wellness</span>{" "}
+            <motion.h1
+              variants={heroItem}
+              className="text-balance text-[clamp(36px,6vw,52px)] font-extrabold leading-tight tracking-tight text-white"
+            >
+              Your <span className="text-[#83F6CC]">emotional wellness</span>{" "}
               companion.
             </motion.h1>
 
-            <motion.p variants={heroItem} className="mx-auto mt-5 max-w-[420px] text-lg leading-relaxed text-white/65">
+            <motion.p
+              variants={heroItem}
+              className="mx-auto mt-5 max-w-[420px] text-lg leading-relaxed text-white/65"
+            >
               Log how you&apos;re feeling in 2 seconds. See patterns. Get
               personalized activities to feel better right now.
             </motion.p>
 
-            <motion.div variants={heroItem} className="mt-8 flex flex-col items-center gap-3">
+            <motion.div
+              variants={heroItem}
+              className="mt-8 flex flex-col items-center gap-3"
+            >
               <AppStoreButton />
               <p className="text-sm text-white/40">Free to start · iOS only</p>
             </motion.div>
@@ -184,7 +212,12 @@ export default function Home() {
                 transition={{
                   opacity: { delay: 0.9, duration: 0.5 },
                   x: { delay: 0.9, duration: 0.5 },
-                  y: { delay: 1.4, duration: 3, repeat: Infinity, ease: "easeInOut" },
+                  y: {
+                    delay: 1.4,
+                    duration: 3,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                  },
                 }}
               >
                 <p className="text-[9px] text-white/60">Current streak</p>
@@ -198,7 +231,12 @@ export default function Home() {
                 transition={{
                   opacity: { delay: 1.0, duration: 0.5 },
                   x: { delay: 1.0, duration: 0.5 },
-                  y: { delay: 1.6, duration: 3.5, repeat: Infinity, ease: "easeInOut" },
+                  y: {
+                    delay: 1.6,
+                    duration: 3.5,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                  },
                 }}
               >
                 <p className="text-[9px] text-white/60">Today&apos;s mood</p>
@@ -211,8 +249,18 @@ export default function Home() {
                 animate={{ opacity: 1, scale: 1, y: [0, -6, 0] }}
                 transition={{
                   opacity: { delay: 1.1, duration: 0.4 },
-                  scale: { delay: 1.1, duration: 0.4, type: "spring", stiffness: 80 },
-                  y: { delay: 1.8, duration: 2.8, repeat: Infinity, ease: "easeInOut" },
+                  scale: {
+                    delay: 1.1,
+                    duration: 0.4,
+                    type: "spring",
+                    stiffness: 80,
+                  },
+                  y: {
+                    delay: 1.8,
+                    duration: 2.8,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                  },
                 }}
               >
                 <p className="text-[9px] text-[#0a6648]">Level</p>
@@ -310,11 +358,15 @@ export default function Home() {
                 <ScrollReveal key={t.name} variant="fade-up" delay={i * 120}>
                   <motion.div
                     className="rounded-[18px] border border-[rgba(139,111,232,0.1)] bg-[#faf9ff] p-6 h-full"
-                    whileHover={{ y: -4, boxShadow: "0 12px 32px rgba(139,111,232,0.15)" }}
+                    whileHover={{
+                      y: -4,
+                      boxShadow: "0 12px 32px rgba(139,111,232,0.15)",
+                    }}
                     transition={{ type: "spring", stiffness: 300, damping: 20 }}
                   >
                     <div
                       className="mb-3 text-[#FFD93D]"
+                      role="img"
                       aria-label={`${t.stars} out of 5 stars`}
                     >
                       {"★".repeat(t.stars)}
@@ -348,7 +400,10 @@ export default function Home() {
               <ScrollReveal variant="fade-right" delay={100}>
                 <motion.div
                   className="rounded-3xl border border-[rgba(139,111,232,0.15)] bg-white p-8"
-                  whileHover={{ scale: 1.01, boxShadow: "0 8px 24px rgba(139,111,232,0.1)" }}
+                  whileHover={{
+                    scale: 1.01,
+                    boxShadow: "0 8px 24px rgba(139,111,232,0.1)",
+                  }}
                   transition={{ type: "spring", stiffness: 250, damping: 20 }}
                 >
                   <p className="text-sm font-semibold text-[#9CA3AF]">Free</p>
@@ -386,7 +441,10 @@ export default function Home() {
               <ScrollReveal variant="fade-left" delay={200}>
                 <motion.div
                   className="rounded-3xl bg-[#1A1A1A] p-8"
-                  whileHover={{ scale: 1.02, boxShadow: "0 0 40px rgba(139,111,232,0.35)" }}
+                  whileHover={{
+                    scale: 1.02,
+                    boxShadow: "0 0 40px rgba(139,111,232,0.35)",
+                  }}
                   transition={{ type: "spring", stiffness: 250, damping: 20 }}
                 >
                   <div className="flex items-center justify-between">

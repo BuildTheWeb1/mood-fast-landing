@@ -1,0 +1,98 @@
+<h2>Feature Showcase Style</h2>
+<p class="subtitle">We have 6 app screenshots (home, mood, gratitude, progress, activity, activities). How should the feature section present them?</p>
+
+<div class="cards">
+  <div class="card" data-choice="a" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#f8f6ff; height:160px; padding:16px; display:flex; flex-direction:column; gap:10px;">
+      <!-- Alternating rows -->
+      <div style="display:flex;align-items:center;gap:12px;">
+        <div style="width:36px;height:64px;background:#1A1A1A;border-radius:7px;flex-shrink:0;">
+          <div style="width:30px;height:56px;background:linear-gradient(180deg,#8B6FE8,#c8a8e8);border-radius:5px;margin:3px;"></div>
+        </div>
+        <div style="flex:1;">
+          <div style="width:80%;height:7px;background:#1A1A1A;border-radius:3px;margin-bottom:5px;"></div>
+          <div style="width:100%;height:5px;background:#ccc;border-radius:3px;margin-bottom:3px;"></div>
+          <div style="width:70%;height:5px;background:#ccc;border-radius:3px;"></div>
+        </div>
+      </div>
+      <div style="display:flex;align-items:center;gap:12px;flex-direction:row-reverse;">
+        <div style="width:36px;height:64px;background:#1A1A1A;border-radius:7px;flex-shrink:0;">
+          <div style="width:30px;height:56px;background:linear-gradient(180deg,#83F6CC,#8B6FE8);border-radius:5px;margin:3px;"></div>
+        </div>
+        <div style="flex:1;text-align:right;">
+          <div style="width:80%;height:7px;background:#1A1A1A;border-radius:3px;margin-bottom:5px;margin-left:auto;"></div>
+          <div style="width:100%;height:5px;background:#ccc;border-radius:3px;margin-bottom:3px;"></div>
+          <div style="width:70%;height:5px;background:#ccc;border-radius:3px;margin-left:auto;"></div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>A — Alternating left/right rows</h3>
+      <p>Each feature gets its own row: screenshot on one side, headline + description on the other. Alternates direction. Great for storytelling a user journey.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="b" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#f8f6ff; height:160px; padding:16px;">
+      <div style="text-align:center;margin-bottom:8px;">
+        <div style="width:50%;height:7px;background:#1A1A1A;border-radius:3px;margin:0 auto 4px;"></div>
+        <div style="width:70%;height:5px;background:#ccc;border-radius:3px;margin:0 auto;"></div>
+      </div>
+      <!-- 3 cards in a row -->
+      <div style="display:flex;gap:6px;justify-content:center;align-items:flex-end;">
+        <div style="background:white;border-radius:10px;padding:8px;box-shadow:0 2px 8px rgba(0,0,0,0.08);width:60px;text-align:center;">
+          <div style="width:40px;height:72px;background:#1A1A1A;border-radius:7px;margin:0 auto 5px;">
+            <div style="width:34px;height:64px;background:linear-gradient(180deg,#8B6FE8,#c8a8e8);border-radius:5px;margin:3px;"></div>
+          </div>
+          <div style="width:40px;height:5px;background:#1A1A1A;border-radius:2px;margin:0 auto 3px;"></div>
+          <div style="width:35px;height:4px;background:#ccc;border-radius:2px;margin:0 auto;"></div>
+        </div>
+        <div style="background:white;border-radius:10px;padding:8px;box-shadow:0 2px 8px rgba(0,0,0,0.08);width:60px;text-align:center;transform:translateY(-6px);">
+          <div style="width:40px;height:72px;background:#1A1A1A;border-radius:7px;margin:0 auto 5px;">
+            <div style="width:34px;height:64px;background:linear-gradient(180deg,#83F6CC,#8B6FE8);border-radius:5px;margin:3px;"></div>
+          </div>
+          <div style="width:40px;height:5px;background:#1A1A1A;border-radius:2px;margin:0 auto 3px;"></div>
+          <div style="width:35px;height:4px;background:#ccc;border-radius:2px;margin:0 auto;"></div>
+        </div>
+        <div style="background:white;border-radius:10px;padding:8px;box-shadow:0 2px 8px rgba(0,0,0,0.08);width:60px;text-align:center;">
+          <div style="width:40px;height:72px;background:#1A1A1A;border-radius:7px;margin:0 auto 5px;">
+            <div style="width:34px;height:64px;background:linear-gradient(180deg,#c8a8e8,#83F6CC);border-radius:5px;margin:3px;"></div>
+          </div>
+          <div style="width:40px;height:5px;background:#1A1A1A;border-radius:2px;margin:0 auto 3px;"></div>
+          <div style="width:35px;height:4px;background:#ccc;border-radius:2px;margin:0 auto;"></div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>B — Feature cards grid (3 per row)</h3>
+      <p>Each feature is a white card with the screenshot thumbnail + label. 2 rows of 3. Quick, scannable, feels more like an app gallery.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="c" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#f8f6ff; height:160px; padding:16px; display:flex; flex-direction:column; align-items:center; justify-content:center;">
+      <!-- Tab selector -->
+      <div style="display:flex;gap:4px;background:#ede8ff;border-radius:20px;padding:3px;margin-bottom:12px;">
+        <div style="background:#8B6FE8;border-radius:16px;padding:3px 10px;font-size:8px;color:white;font-family:sans-serif;">Mood</div>
+        <div style="border-radius:16px;padding:3px 10px;font-size:8px;color:#666;font-family:sans-serif;">Activities</div>
+        <div style="border-radius:16px;padding:3px 10px;font-size:8px;color:#666;font-family:sans-serif;">Progress</div>
+        <div style="border-radius:16px;padding:3px 10px;font-size:8px;color:#666;font-family:sans-serif;">Gratitude</div>
+      </div>
+      <!-- Active feature display -->
+      <div style="display:flex;align-items:center;gap:12px;">
+        <div style="width:44px;height:78px;background:#1A1A1A;border-radius:9px;">
+          <div style="width:38px;height:70px;background:linear-gradient(180deg,#8B6FE8,#c8a8e8);border-radius:7px;margin:3px;"></div>
+        </div>
+        <div>
+          <div style="width:70px;height:7px;background:#1A1A1A;border-radius:3px;margin-bottom:5px;"></div>
+          <div style="width:90px;height:5px;background:#ccc;border-radius:3px;margin-bottom:3px;"></div>
+          <div style="width:75px;height:5px;background:#ccc;border-radius:3px;"></div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>C — Tabbed feature switcher</h3>
+      <p>Pill tabs (Mood / Activities / Progress / Gratitude) that swap the screenshot + description shown. Interactive, compact, feels polished.</p>
+    </div>
+  </div>
+</div>

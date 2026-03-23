@@ -1,8 +1,8 @@
 "use client";
 
-import { useState } from "react";
-import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
+import Image from "next/image";
+import { useState } from "react";
 
 interface Feature {
   tab: string;
@@ -137,8 +137,14 @@ export function FeatureTabs() {
               </p>
               <ul className="mt-5 space-y-2">
                 {active.bullets.map((b) => (
-                  <li key={b} className="flex items-center gap-2 text-sm text-[#4B5563]">
-                    <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#83F6CC]" aria-hidden="true" />
+                  <li
+                    key={b}
+                    className="flex items-center gap-2 text-sm text-[#4B5563]"
+                  >
+                    <span
+                      className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#83F6CC]"
+                      aria-hidden="true"
+                    />
                     {b}
                   </li>
                 ))}
