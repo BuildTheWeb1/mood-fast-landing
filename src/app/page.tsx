@@ -27,6 +27,35 @@ const heroItem = {
   },
 };
 
+const centerPhoneVariants = {
+  hidden: { opacity: 0, y: 60 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { type: "spring" as const, stiffness: 60, damping: 20, delay: 0.5 },
+  },
+};
+
+const leftPhoneVariants = {
+  hidden: { opacity: 0, y: 80, rotate: -8 },
+  show: {
+    opacity: 1,
+    y: 16,
+    rotate: -8,
+    transition: { type: "spring" as const, stiffness: 55, damping: 18, delay: 0.65 },
+  },
+};
+
+const rightPhoneVariants = {
+  hidden: { opacity: 0, y: 80, rotate: 8 },
+  show: {
+    opacity: 1,
+    y: 16,
+    rotate: 8,
+    transition: { type: "spring" as const, stiffness: 55, damping: 18, delay: 0.72 },
+  },
+};
+
 const APP_STORE_URL = "https://apps.apple.com/app/mood-fast/id6755293215";
 
 const testimonials = [
@@ -149,30 +178,56 @@ export default function Home() {
             {/* Phone mockups row */}
             <div className="relative mt-12 flex items-end justify-center gap-4">
               {/* Floating bubbles — desktop only */}
-              <div
+              <motion.div
                 className="absolute left-[5%] top-4 hidden rounded-2xl border border-white/20 bg-white/12 px-3 py-2 backdrop-blur-md lg:block"
                 aria-hidden="true"
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0, y: [0, -6, 0] }}
+                transition={{
+                  opacity: { delay: 0.9, duration: 0.5 },
+                  x: { delay: 0.9, duration: 0.5 },
+                  y: { delay: 1.4, duration: 3, repeat: Infinity, ease: "easeInOut" },
+                }}
               >
                 <p className="text-[9px] text-white/60">Current streak</p>
                 <p className="text-sm font-bold text-white">🔥 30 days</p>
-              </div>
-              <div
+              </motion.div>
+              <motion.div
                 className="absolute right-[5%] top-8 hidden rounded-2xl border border-white/20 bg-white/12 px-3 py-2 backdrop-blur-md lg:block"
                 aria-hidden="true"
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0, y: [0, -8, 0] }}
+                transition={{
+                  opacity: { delay: 1.0, duration: 0.5 },
+                  x: { delay: 1.0, duration: 0.5 },
+                  y: { delay: 1.6, duration: 3.5, repeat: Infinity, ease: "easeInOut" },
+                }}
               >
                 <p className="text-[9px] text-white/60">Today&apos;s mood</p>
                 <p className="text-sm font-bold text-[#83F6CC]">😊 Great</p>
-              </div>
-              <div
+              </motion.div>
+              <motion.div
                 className="absolute bottom-20 left-[12%] z-10 hidden rounded-2xl bg-[#83F6CC] px-3 py-2 lg:block"
                 aria-hidden="true"
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1, y: [0, -6, 0] }}
+                transition={{
+                  opacity: { delay: 1.1, duration: 0.4 },
+                  scale: { delay: 1.1, duration: 0.4, type: "spring", stiffness: 80 },
+                  y: { delay: 1.8, duration: 2.8, repeat: Infinity, ease: "easeInOut" },
+                }}
               >
                 <p className="text-[9px] text-[#0a6648]">Level</p>
                 <p className="text-sm font-bold text-[#0a6648]">⭐ Level 5</p>
-              </div>
+              </motion.div>
 
               {/* Left phone — desktop only */}
-              <div className="hidden rotate-[-8deg] translate-y-4 overflow-hidden rounded-[28px] bg-[#0d0d0d] shadow-[0_28px_70px_rgba(0,0,0,0.5)] lg:block">
+              <motion.div
+                className="hidden overflow-hidden rounded-[28px] bg-[#0d0d0d] shadow-[0_28px_70px_rgba(0,0,0,0.5)] lg:block"
+                variants={leftPhoneVariants}
+                initial="hidden"
+                animate="show"
+              >
                 <div className="relative h-[320px] w-[178px]">
                   <Image
                     src="/images/mood-fast_mood.png"
@@ -182,10 +237,15 @@ export default function Home() {
                     className="object-cover object-top"
                   />
                 </div>
-              </div>
+              </motion.div>
 
               {/* Center phone — always visible */}
-              <div className="overflow-hidden rounded-[28px] bg-[#0d0d0d] shadow-[0_28px_70px_rgba(0,0,0,0.5)]">
+              <motion.div
+                className="overflow-hidden rounded-[28px] bg-[#0d0d0d] shadow-[0_28px_70px_rgba(0,0,0,0.5)]"
+                variants={centerPhoneVariants}
+                initial="hidden"
+                animate="show"
+              >
                 <div className="relative h-[380px] w-[210px]">
                   <Image
                     src="/images/mood-fast_home.png"
@@ -195,10 +255,15 @@ export default function Home() {
                     className="object-cover object-top"
                   />
                 </div>
-              </div>
+              </motion.div>
 
               {/* Right phone — desktop only */}
-              <div className="hidden rotate-[8deg] translate-y-4 overflow-hidden rounded-[28px] bg-[#0d0d0d] shadow-[0_28px_70px_rgba(0,0,0,0.5)] lg:block">
+              <motion.div
+                className="hidden overflow-hidden rounded-[28px] bg-[#0d0d0d] shadow-[0_28px_70px_rgba(0,0,0,0.5)] lg:block"
+                variants={rightPhoneVariants}
+                initial="hidden"
+                animate="show"
+              >
                 <div className="relative h-[320px] w-[178px]">
                   <Image
                     src="/images/mood-fast_progress.png"
@@ -208,7 +273,7 @@ export default function Home() {
                     className="object-cover object-top"
                   />
                 </div>
-              </div>
+              </motion.div>
             </div>
           </motion.div>
         </section>
