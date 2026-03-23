@@ -309,8 +309,12 @@ export default function Home() {
             </ScrollReveal>
             <div className="mt-10 grid gap-4 md:grid-cols-3">
               {testimonials.map((t, i) => (
-                <ScrollReveal key={t.name} variant="fade-up" delay={i * 100}>
-                  <div className="rounded-[18px] border border-[rgba(139,111,232,0.1)] bg-[#faf9ff] p-6">
+                <ScrollReveal key={t.name} variant="fade-up" delay={i * 120}>
+                  <motion.div
+                    className="rounded-[18px] border border-[rgba(139,111,232,0.1)] bg-[#faf9ff] p-6 h-full"
+                    whileHover={{ y: -4, boxShadow: "0 12px 32px rgba(139,111,232,0.15)" }}
+                    transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                  >
                     <div
                       className="mb-3 text-[#FFD93D]"
                       aria-label={`${t.stars} out of 5 stars`}
@@ -323,7 +327,7 @@ export default function Home() {
                     <p className="mt-4 text-sm font-semibold text-[#8B6FE8]">
                       — {t.name}, App Store
                     </p>
-                  </div>
+                  </motion.div>
                 </ScrollReveal>
               ))}
             </div>
