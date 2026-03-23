@@ -16,7 +16,6 @@ interface ScrollRevealProps {
   children: ReactNode;
   variant?: AnimationVariant;
   delay?: number;
-  duration?: number;
   className?: string;
 }
 
