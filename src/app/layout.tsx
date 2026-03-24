@@ -83,7 +83,7 @@ export const metadata: Metadata = {
   category: "Health & Wellness",
   appLinks: {
     ios: {
-      url: "https://apps.apple.com/app/mood-fast",
+      url: "https://apps.apple.com/app/mood-fast/id6755293215",
       app_store_id: "mood-fast",
       app_name: "Mood Fast",
     },

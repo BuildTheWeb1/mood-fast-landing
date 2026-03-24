@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://moodfast.prositemap.xml
+Sitemap: https://moodfast.pro/sitemap.xml

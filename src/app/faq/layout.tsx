@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "FAQ",
   description:
-    "Frequently asked questions about Mood Fast. Learn about pricing, privacy, data export, offline mode, and how the mood tracking app works.",
+    "FAQs about Mood Fast: pricing, privacy, data export, offline mode, and how our mood tracking app works.",
   alternates: {
     canonical: "/faq",
   },

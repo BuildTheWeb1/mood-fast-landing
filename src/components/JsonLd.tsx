@@ -32,7 +32,7 @@ export function JsonLd() {
     "@type": "Organization",
     name: "Mood Fast",
     url: "https://moodfast.pro",
-    logo: "https://moodfast.proimages/mood-fast_logo.png",
+    logo: "https://moodfast.pro/images/mood-fast_logo.png",
     sameAs: ["https://x.com/buildtheweb1"],
   };
 

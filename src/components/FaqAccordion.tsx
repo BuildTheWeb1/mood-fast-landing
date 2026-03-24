@@ -9,6 +9,11 @@ const faqs = [
       "Free to download with no time limit. Log your mood, track patterns, and follow a gratitude practice at $0. PRO ($4.99/month or $29.99/year) unlocks unlimited daily check-ins, your full mood history, advanced analytics, custom reminders, and data export.",
   },
   {
+    question: "Is Mood Fast a replacement for therapy?",
+    answer:
+      "No — Mood Fast is a self-awareness tool, not therapy. It helps you spot patterns and try evidence-based activities like breathing and grounding exercises. If you're dealing with clinical depression or anxiety, please see a professional. That said, many users find Mood Fast makes therapy *more* effective — you'll have real data to bring to sessions.",
+  },
+  {
     question: "Why should I upgrade to PRO?",
     answer:
       "The free tier covers daily habits. PRO is for going deeper: unlimited check-ins per day, your complete mood history (up to 10 years), advanced analytics, custom reminder schedules, data export as CSV, JSON, or PDF, and access to premium activities. Most people upgrade after 30 days when they want to keep their full history.",
@@ -31,7 +36,7 @@ const faqs = [
   {
     question: "Is my data private?",
     answer:
-      "Absolutely. Your mood data is encrypted and stored securely. We never sell or share your personal information. You can export or delete your data at any time from the app settings.",
+      "Yes. Your data is encrypted end-to-end and stored securely on your device. We never sell, share, or use your mood data to train AI models. Period. You own your data — export or delete it anytime from the app.",
   },
   {
     question: "Can I export my data?",

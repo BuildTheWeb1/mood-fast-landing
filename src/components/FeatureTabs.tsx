@@ -20,9 +20,9 @@ const features: Feature[] = [
     screenshot: "/images/mood-fast_mood.png",
     screenshotAlt: "Mood Fast mood tracking screen",
     tag: "Mood Tracking",
-    heading: "2 seconds. No excuses.",
+    heading: "See patterns that explain your week.",
     description:
-      "Log how you're feeling in a single tap. No forms, no journals. Mood Fast captures your emotional state and builds a rich picture over time — automatically.",
+      "One tap to log your mood. The app finds the threads — why Monday drains you, what lifts you on Wednesday, which habits actually help. Spot your trends before they become your defaults.",
     bullets: [
       "Positive, neutral & negative moods with intensity",
       "Optional notes (free & PRO limits)",
@@ -35,9 +35,9 @@ const features: Feature[] = [
     screenshot: "/images/mood-fast_activities.png",
     screenshotAlt: "Mood Fast guided activities screen",
     tag: "Activities",
-    heading: "Guided sessions for right now.",
+    heading: "The right activity for right now.",
     description:
-      "Breathing, grounding, movement, reframing — personalized to how you're feeling today, not in theory.",
+      "Sad? Get an activation. Anxious? Get a breathing session. Activities match your current mood state, not a generic wellness category. Some take 60 seconds. All of them move the needle.",
     bullets: [
       "6 categories: Breathing, Grounding, Activation, Reframing, Gratitude, Sleep",
       "Sessions recommended based on your current mood",
@@ -50,9 +50,9 @@ const features: Feature[] = [
     screenshot: "/images/mood-fast_gratitude.png",
     screenshotAlt: "Mood Fast gratitude journal screen",
     tag: "Gratitude",
-    heading: "A daily gratitude practice.",
+    heading: "Build momentum, one day at a time.",
     description:
-      "A simple daily ritual that compounds. Track your streak, reflect with AI-powered prompts, and build positivity over time.",
+      "One gratitude a day sounds small — until you hit day 30 and realize your emotional defaults have shifted. Streaks keep you coming back. AI prompts go deeper than 'what are you grateful for.'",
     bullets: [
       "Daily gratitude flow from the home screen",
       "AI-generated reflection prompts (Apple Intelligence)",
@@ -65,9 +65,9 @@ const features: Feature[] = [
     screenshot: "/images/mood-fast_progress.png",
     screenshotAlt: "Mood Fast progress and stats screen",
     tag: "Progress",
-    heading: "See how far you've come.",
+    heading: "Watch your consistency compound.",
     description:
-      "Streaks, XP, level progression, weekly goals, and achievement badges — all in one place.",
+      "Streaks, XP, level progression, weekly goals, and badges — all in one place. The numbers make the invisible visible: consistency you can actually see.",
     bullets: [
       "Activity and gratitude streak cards",
       "XP and level progression",

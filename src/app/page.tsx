@@ -73,24 +73,6 @@ const rightPhoneVariants = {
 
 const APP_STORE_URL = "https://apps.apple.com/app/mood-fast/id6755293215";
 
-const testimonials = [
-  {
-    name: "Sarah M.",
-    text: "I never realized how much my mood changes through the week until Mood Fast showed me the pattern. Total game changer.",
-    stars: 5,
-  },
-  {
-    name: "James T.",
-    text: "Takes literally 2 seconds. I've tried every journal app and quit after a week. I'm on a 30-day streak with this one.",
-    stars: 5,
-  },
-  {
-    name: "Priya K.",
-    text: "The breathing exercises it suggests when I'm anxious actually help. And the gratitude streak keeps me coming back.",
-    stars: 5,
-  },
-];
-
 const CheckIcon = () => (
   <svg
     className="h-4 w-4 flex-shrink-0 text-[#83F6CC]"
@@ -167,16 +149,16 @@ export default function Home() {
               variants={heroItem}
               className="text-balance text-[clamp(36px,6vw,52px)] font-extrabold leading-tight tracking-tight text-white"
             >
-              Your <span className="text-[#83F6CC]">emotional wellness</span>{" "}
-              companion.
+              See the <span className="text-[#83F6CC]">patterns</span> behind
+              your <span className="text-[#83F6CC]">mood.</span>
             </motion.h1>
 
             <motion.p
               variants={heroItem}
               className="mx-auto mt-5 max-w-[420px] text-lg leading-relaxed text-white/65"
             >
-              Log how you&apos;re feeling in 2 seconds. See patterns. Get
-              personalized activities to feel better right now.
+              2-second check-ins reveal mood trends before they become habits.
+              Break the patterns that drag you down.
             </motion.p>
 
             <motion.div
@@ -333,11 +315,10 @@ export default function Home() {
           <div className="mx-auto max-w-[700px]">
             <ScrollReveal variant="fade-up">
               <h2 className="text-balance text-center text-3xl font-extrabold text-[#1A1A1A]">
-                Start free. Go deeper with PRO.
+                Free forever. Or unlock your full pattern.
               </h2>
               <p className="mx-auto mt-3 max-w-lg text-center text-[#6B7280]">
-                The free tier is genuinely useful. PRO is for when you want the
-                full picture.
+                Free shows you when your moods shift. PRO shows you why.
               </p>
             </ScrollReveal>
             <div className="mt-10 grid gap-5 md:grid-cols-2">
@@ -463,10 +444,10 @@ export default function Home() {
           <div className="relative z-10 mx-auto max-w-3xl">
             <ScrollReveal variant="fade-up">
               <h2 className="text-balance text-3xl font-extrabold text-white md:text-4xl">
-                Start your emotional wellness journey today.
+                Your patterns are clearer than you think.
               </h2>
               <p className="mx-auto mt-4 max-w-md text-white/55">
-                2 seconds a day. Real patterns. Better days.
+                2 seconds a day to finally see them.
               </p>
               <div className="mt-8 flex flex-col items-center gap-4">
                 <AppStoreButton />
