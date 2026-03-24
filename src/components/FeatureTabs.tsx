@@ -115,7 +115,7 @@ export function FeatureTabs() {
             transition={{ type: "spring", stiffness: 100, damping: 20 }}
           >
             {/* Phone mockup */}
-            <div className="relative h-[440px] w-[244px] flex-shrink-0 overflow-hidden rounded-[34px] bg-[#1A1A1A] shadow-[0_20px_50px_rgba(0,0,0,0.2)]">
+            <div className="relative h-[560px] w-[290px] flex-shrink-0 overflow-hidden rounded-[40px] bg-[#1A1A1A] shadow-[0_20px_50px_rgba(0,0,0,0.2)]">
               <Image
                 src={active.screenshot}
                 alt={active.screenshotAlt}

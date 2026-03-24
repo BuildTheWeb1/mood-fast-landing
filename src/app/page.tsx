@@ -163,20 +163,6 @@ export default function Home() {
             initial="hidden"
             animate="show"
           >
-            {/* Social proof badge */}
-            <motion.div
-              variants={heroItem}
-              className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-2 backdrop-blur-sm"
-            >
-              <span className="text-[#FFD93D]" aria-hidden="true">
-                ★★★★★
-              </span>
-              <span className="text-sm font-medium text-white/90">
-                <span className="sr-only">Rated 4.8 out of 5.</span>
-                <span aria-hidden="true">4.8 · 100+ App Store reviews</span>
-              </span>
-            </motion.div>
-
             <motion.h1
               variants={heroItem}
               className="text-balance text-[clamp(36px,6vw,52px)] font-extrabold leading-tight tracking-tight text-white"
@@ -274,7 +260,7 @@ export default function Home() {
                 initial="hidden"
                 animate="show"
               >
-                <div className="relative h-[320px] w-[178px]">
+                <div className="relative h-[380px] w-[178px]">
                   <Image
                     src="/images/mood-fast_mood.png"
                     alt="Mood Fast mood tracking screen"
@@ -339,48 +325,6 @@ export default function Home() {
               </div>
             </ScrollReveal>
             <FeatureTabs />
-          </div>
-        </section>
-
-        {/* ── SOCIAL PROOF ── */}
-        <section className="bg-white px-6 py-20 lg:px-20">
-          <div className="mx-auto max-w-5xl">
-            <ScrollReveal variant="fade-up">
-              <h2 className="text-balance text-center text-3xl font-extrabold text-[#1A1A1A]">
-                What people are saying
-              </h2>
-              <p className="mt-2 text-center text-sm text-[#6B7280]">
-                Real reviews from the App Store
-              </p>
-            </ScrollReveal>
-            <div className="mt-10 grid gap-4 md:grid-cols-3">
-              {testimonials.map((t, i) => (
-                <ScrollReveal key={t.name} variant="fade-up" delay={i * 120}>
-                  <motion.div
-                    className="rounded-[18px] border border-[rgba(139,111,232,0.1)] bg-[#faf9ff] p-6 h-full"
-                    whileHover={{
-                      y: -4,
-                      boxShadow: "0 12px 32px rgba(139,111,232,0.15)",
-                    }}
-                    transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                  >
-                    <div
-                      className="mb-3 text-[#FFD93D]"
-                      role="img"
-                      aria-label={`${t.stars} out of 5 stars`}
-                    >
-                      {"★".repeat(t.stars)}
-                    </div>
-                    <p className="leading-relaxed text-[#1A1A1A]">
-                      &ldquo;{t.text}&rdquo;
-                    </p>
-                    <p className="mt-4 text-sm font-semibold text-[#8B6FE8]">
-                      — {t.name}, App Store
-                    </p>
-                  </motion.div>
-                </ScrollReveal>
-              ))}
-            </div>
           </div>
         </section>
 
