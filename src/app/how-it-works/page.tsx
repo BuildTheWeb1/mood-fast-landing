@@ -192,7 +192,7 @@ export default function HowItWorksPage() {
               </h1>
               <p className="mx-auto mt-4 max-w-2xl text-lg text-[#6B7280]">
                 Mood Fast makes emotional wellness simple. Here&apos;s how it
-                works — and why it actually sticks.
+                works — and why small daily moments add up to real change.
               </p>
             </ScrollReveal>
           </div>

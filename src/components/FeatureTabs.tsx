@@ -22,7 +22,7 @@ const features: Feature[] = [
     tag: "Mood Tracking",
     heading: "See patterns that explain your week.",
     description:
-      "One tap to log your mood. The app finds the threads — why Monday drains you, what lifts you on Wednesday, which habits actually help. Spot your trends before they become your defaults.",
+      "One tap to log your mood. The app reveals the connections — what gives you energy on Wednesday, which habits are quietly lifting you, where you have more control than you think.",
     bullets: [
       "Positive, neutral & negative moods with intensity",
       "Optional notes (free & PRO limits)",

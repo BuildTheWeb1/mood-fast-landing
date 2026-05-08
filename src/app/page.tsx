@@ -157,8 +157,8 @@ export default function Home() {
               variants={heroItem}
               className="mx-auto mt-5 max-w-[420px] text-lg leading-relaxed text-white/65"
             >
-              2-second check-ins reveal mood trends before they become habits.
-              Break the patterns that drag you down.
+              2-second check-ins reveal the mood trends shaping your week — so
+              you can build more of what lifts you, and less of what doesn't.
             </motion.p>
 
             <motion.div
